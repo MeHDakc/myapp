@@ -117,10 +117,9 @@ $(document).ready(function () {
 // Активируем кнопку для предзагруженного варианта
     $('.variant-button[data-variant="variant1"]').addClass('active');
 
-    // Проверка на ввод в поля
     $('#order-form').on("input change", validateForm);
 
-    // Логика для кнопки "Вихід"
+
     const logoutButton = document.getElementById('logout-button');
     if (logoutButton) {
         logoutButton.addEventListener('click', function () {

@@ -104,3 +104,11 @@ def load_products():
         return jsonify({"error": "Невідомий варіант"}), 400
 
     return jsonify({"products": products})
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
+
+@app.route('/go_to_orders')
+def go_to_orders():
+    return render_template('order_form.html')

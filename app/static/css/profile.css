@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    text-align: center;
+    padding: 24px;
+    transition: transform 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button, .edit-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover, .edit-button:hover {
+    color: #007bff;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #74ebd5;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background: #e3f2fd;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat span {
+    font-size: 14px;
+    color: #777;
+}
+
+.stat strong {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-top: 4px;
+    color: #333;
+}
+
+.profile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.profile-menu li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.profile-menu li:hover {
+    background: #f1f1f1;
+}
+
+.profile-menu .logout {
+    color: red;
+    font-weight: 600;
+}
+
+.bottom-nav {
+    margin-top: 20px;
+}
+
+.orders-button {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.orders-button:hover {
+    background: #218838;
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 95%;
+        max-width: 360px;
+    }
+}

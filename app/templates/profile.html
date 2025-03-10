@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профіль користувача</title>
+    <link rel="stylesheet" href="../static/css/profile.css">
+    <script src="../static/js/profile.js" defer></script>
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            <button class="back-button" onclick="goBack()">&#8592;</button>
+            <h2>Профіль</h2>
+            <button class="edit-button">✎</button>
+        </header>
+        <div class="profile-info">
+            <img src="avatar.jpg" alt="Фото профілю" class="avatar">
+            <h3>Іван Петренко</h3>
+            <p>Київ, Україна</p>
+            <div class="stats">
+                <div class="stat">
+                    <span>Баланс</span>
+                    <strong>500.00 ₴</strong>
+                </div>
+                <div class="stat">
+                    <span>Замовлення</span>
+                    <strong>15</strong>
+                </div>
+                <div class="stat">
+                    <span>Витрачено</span>
+                    <strong>3500.00 ₴</strong>
+                </div>
+            </div>
+        </div>
+        <nav class="profile-menu">
+            <ul>
+                <li>Особиста інформація</li>
+                <li onclick="goToOrders()">Мої замовлення</li>
+                <li>Улюблене</li>
+                <li>Оплата</li>
+                <li>Рекомендовані магазини</li>
+                <li>Найближчий магазин</li>
+                <li id="logout-button" class="logout" onclick="logout()">Вийти</li>
+            </ul>
+        </nav>
+        <div class="bottom-nav">
+            <button class="orders-button" href="/go_to_orders">Перейти до замовлень</button>
+        </div>
+    </div>
+</body>
+</html>
