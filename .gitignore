@@ -1,3 +1,4 @@
 # Python virtual environment
 venv/
-*key.env
+.venv
+key.env
