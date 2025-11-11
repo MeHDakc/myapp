@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Підтвердження замовлення</title>
     <link rel="stylesheet" href="../static/css/order_form.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -16,7 +16,6 @@
     </div>
 
     <form method="POST" id="order-form">
-        <!-- Чекбоксы для выбора варианта -->
         <div class="variant-selection">
             <h4>Виберіть варіант:</h4>
             <div class="variant-buttons">
@@ -25,7 +24,6 @@
             </div>
         </div>
 
-        <!-- Таблица товаров -->
         <h4 class="order-table-heading">Вміст замовлення:</h4>
         <table class="order-table">
             <thead>
@@ -37,7 +35,6 @@
             </tr>
             </thead>
             <tbody id="products-table-body">
-
             </tbody>
         </table>
 

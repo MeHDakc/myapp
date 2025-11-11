@@ -2,21 +2,22 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Профіль користувача</title>
     <link rel="stylesheet" href="../static/css/profile.css">
     <script src="../static/js/profile.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
     <div class="profile-container">
         <header>
-            <button class="back-button" onclick="goBack()">&#8592;</button>
+            <button class="back-button" id="back-button"><i class="fas fa-arrow-left"></i></button>
             <h2>Профіль</h2>
-            <button class="edit-button">✎</button>
+            <button class="edit-button"><i class="fas fa-pen"></i></button>
         </header>
         <div class="profile-info">
             <img src="avatar.jpg" alt="Фото профілю" class="avatar">
-            <h3>Іван Петренко</h3>
+            <h3>Николай Нидвораев</h3>
             <p>Київ, Україна</p>
             <div class="stats">
                 <div class="stat">
@@ -36,16 +37,16 @@
         <nav class="profile-menu">
             <ul>
                 <li>Особиста інформація</li>
-                <li onclick="goToOrders()">Мої замовлення</li>
+                <li id="orders-link">Мої замовлення</li>
                 <li>Улюблене</li>
                 <li>Оплата</li>
                 <li>Рекомендовані магазини</li>
                 <li>Найближчий магазин</li>
-                <li id="logout-button" class="logout" onclick="logout()">Вийти</li>
+                <li id="logout-button" class="logout">Вийти</li>
             </ul>
         </nav>
         <div class="bottom-nav">
-            <button class="orders-button" href="/go_to_orders">Перейти до замовлень</button>
+            <button class="orders-button" id="orders-button">Перейти до замовлень</button>
         </div>
     </div>
 </body>

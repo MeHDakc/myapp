@@ -1,248 +1,151 @@
-html, body * {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+/* order_form.css - современный адаптивный стиль */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    text-align: center;
 }
 
-body {
-    /*background: url(../images/order_form_bg.jpg) no-repeat center center fixed;*/
-    /*background-size: cover;*/
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    background: #2c3e50;
 }
 
 .container {
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 100px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .user-options {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
-#profile-link,
-#logout-button {
-    background-color: #1059FF;
-    color: #ffffff;
-    border: none;
+#profile-link, #logout-button {
+    background-color: #3498db;
+    color: white;
     padding: 10px 15px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    transition: background 0.3s;
 }
 
-#profile-link:hover,
+#logout-button {
+    background-color: #e74c3c;
+}
+
+#profile-link:hover {
+    background-color: #2980b9;
+}
+
 #logout-button:hover {
-    background-color: #0F4FE6;
+    background-color: #c0392b;
 }
 
 .variant-selection {
-    color: black;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.variant-buttons {
-    display: inline-flex;
-    gap: 10px;
+    margin: 20px 0;
 }
 
 .variant-button {
-    background-color: #1059FF;
-    color: #ffffff;
-    border: none;
     padding: 10px 20px;
-    border-radius: 10px; /* Increase border-radius for more rounded appearance */
+    margin: 5px;
+    border: none;
     cursor: pointer;
-    -webkit-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    border-radius: 5px;
+    background: #ddd;
+    transition: 0.3s;
 }
 
-.variant-button.active,
-.variant-button:hover {
-    background-color: #28a745; /* Green color for active/selected variant */
+.variant-button.active {
+    background: #27ae60;
+    color: white;
 }
 
 .order-table {
-    width: 50%; /* Уменьшить ширину таблицы */
-    margin: 20px auto; /* Центрировать таблицу */
+    width: 100%;
     border-collapse: collapse;
-    text-align: center; /* Центрирование содержимого таблицы */
+    margin-top: 20px;
 }
 
-.order-table th,
-.order-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center; /* Центрирование содержимого таблицы */
-    color: #333;
+.quantity {
+    width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
 }
 
-.order-table th {
-    background-color: #f4f4f4;
+.quantity[type=tel]::-webkit-inner-spin-button,
+.quantity[type=tel]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.order-table-heading {
-    color: black;
-    text-align: center; /* Центрируем заголовок таблицы */
+.quantity[type=number] {
+    -moz-appearance: textfield;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #34495e;
+    color: white;
 }
 
 .button-group {
-    margin-top: 20px; /* Отступ сверху */
+    margin-top: 20px;
     display: flex;
-    justify-content: center; /* Центрирование кнопки */
+    justify-content: center;
 }
 
 .confirm {
-    width: 20%; /* Уменьшить ширину кнопки */
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 14px;
-    text-align: center;
-    color: #ffffff;
-    padding: 12px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 10px; /* Increase border-radius for more rounded appearance */
-    background-color: #28a745; /* Green color for submit button */
+    border-radius: 5px;
+    background: #27ae60;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    -webkit-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    transition: background 0.3s;
 }
 
 .confirm:disabled {
-    background-color: #ccc;
+    background: #ccc;
     cursor: not-allowed;
 }
 
 .confirm:hover:enabled {
-    background-color: #218838; /* Darker green color for hover state */
+    background: #218838;
 }
 
-.order-table-container {
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(35, 43, 85, 0.75);
-    border-radius: 5px;
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-}
-
-.order-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-.order-table th, .order-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-}
-
-.order-table th {
-    background-color:  rgba(6 33 175 / 75%);
-    color:  #ffffff;
-}
-
-.order-table-heading {
-    color: black;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.btn-order {
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color .3s ease;
-}
-
-.btn-order:hover {
-    background-color: #218838;
-}
-
-@media (max-width: 768px) {
-    .order-table-container {
-        padding-top: 30px;
-        padding-bottom: 50px;
-    }
-
-    .order-table {
-        width: 100%;
-    }
-
-    .order-table th, .order-table td {
-        padding: 5px;
-    }
-}
-
-.order-table tbody tr:nth-child(odd) {
-    background-color: rgba(35, 43, 85, 0.75);
-}
-
-.order-table tbody tr:nth-child(even) {
-    background-color: rgba(35, 43, 85, 0.95);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
-        padding-top: 30px;
-        padding-bottom: 50px;
-    }
-
-    .variant-buttons {
-        flex-direction: column;
-    }
-
-    .variant-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .order-table th,
-    .order-table td {
-        padding: 5px;
-    }
-
-    .button-group {
-        flex-direction: column;
-        align-items: center; /* Центрирование кнопки для мобильных устройств */
-    }
-
-    .confirm {
         width: 100%;
         padding: 10px;
     }
-}
 
-/* Additional responsive adjustments for smaller devices */
-@media (max-width: 480px) {
-    .variant-buttons {
-        gap: 5px;
-    }
-
-    .variant-button {
-        padding: 8px 15px;
-    }
-
-    .order-table th,
-    .order-table td {
-        font-size: 12px;
-    }
-
-    .confirm {
+    th, td {
+        font-size: 14px;
         padding: 8px;
+    }
+
+    .variant-buttons {
+        display: flex;
+        flex-direction: column;
     }
 }
